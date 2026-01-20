@@ -24,3 +24,14 @@ test_output/
 notes.txt
 personal/
 *.private
+
+# Helper/Setup Files (no longer needed after initial push)
+push_to_github.bat
+push_to_github.ps1
+GITHUB_PUSH_INSTRUCTIONS.md
+PRE_PUSH_CHECKLIST.md
+UPLOAD_VIA_WEB.md
+SETUP.md
+REPOSITORY_STRUCTURE.md
+QUICK_START.md
+FLIPPER_ZERO_CAPABILITIES.md
