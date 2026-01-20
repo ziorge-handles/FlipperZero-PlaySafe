@@ -1,0 +1,19 @@
+REM Open IDE and Project Folder
+REM Opens VS Code (or modify for your IDE) and opens a project folder
+REM Modify the path to your project folder
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING code
+DELAY 500
+ENTER
+DELAY 3000
+CTRL k
+DELAY 200
+CTRL o
+DELAY 1000
+STRING C:\Users\%USERNAME%\Documents\Projects
+DELAY 500
+ENTER
+DELAY 1000

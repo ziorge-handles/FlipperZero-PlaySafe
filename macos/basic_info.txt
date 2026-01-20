@@ -1,0 +1,40 @@
+REM macOS System Information
+REM Gathers basic system information on macOS
+
+DELAY 1000
+COMMAND SPACE
+DELAY 500
+STRING Terminal
+DELAY 500
+ENTER
+DELAY 1500
+STRING echo "===== System Information ====="
+DELAY 500
+ENTER
+DELAY 500
+STRING system_profiler SPSoftwareDataType | grep "System Version"
+DELAY 500
+ENTER
+DELAY 2000
+STRING whoami
+DELAY 500
+ENTER
+DELAY 1000
+STRING hostname
+DELAY 500
+ENTER
+DELAY 1000
+STRING echo ""
+DELAY 500
+ENTER
+STRING echo "===== Hardware Info ====="
+DELAY 500
+ENTER
+DELAY 500
+STRING system_profiler SPHardwareDataType | grep "Model\|Processor\|Memory"
+DELAY 500
+ENTER
+DELAY 3000
+STRING exit
+DELAY 500
+ENTER

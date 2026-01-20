@@ -1,0 +1,50 @@
+REM File Operations Demonstration
+REM Creates a test file in a safe location
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING cmd
+DELAY 500
+CTRL SHIFT ENTER
+DELAY 1000
+ALT y
+DELAY 500
+STRING cd %TEMP%
+DELAY 500
+ENTER
+DELAY 500
+STRING echo BadUSB Test File > badusb_test.txt
+DELAY 500
+ENTER
+DELAY 500
+STRING echo Created at %date% %time% >> badusb_test.txt
+DELAY 500
+ENTER
+DELAY 500
+STRING echo This is a test file created by BadUSB script. >> badusb_test.txt
+DELAY 500
+ENTER
+DELAY 500
+STRING type badusb_test.txt
+DELAY 500
+ENTER
+DELAY 1000
+STRING echo.
+DELAY 500
+ENTER
+STRING echo File created successfully in %TEMP%
+DELAY 500
+ENTER
+DELAY 1000
+STRING echo To delete: del badusb_test.txt
+DELAY 500
+ENTER
+DELAY 1000
+STRING pause
+DELAY 500
+ENTER
+DELAY 2000
+STRING exit
+DELAY 500
+ENTER

@@ -1,0 +1,19 @@
+REM Mute/Unmute System Volume
+REM Toggles system volume mute state
+
+DELAY 1000
+REM Press volume mute key
+VOLUME_MUTE
+DELAY 500
+REM Or use Windows volume mixer
+GUI r
+DELAY 500
+STRING sndvol
+DELAY 500
+ENTER
+DELAY 1000
+TAB
+DELAY 200
+SPACE
+DELAY 500
+ALT F4

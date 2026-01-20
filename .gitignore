@@ -1,0 +1,26 @@
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor Files
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+*~
+
+# Temporary Files
+*.tmp
+*.log
+*.bak
+
+# Test Output
+test_output/
+*.test
+
+# Personal Notes
+notes.txt
+personal/
+*.private

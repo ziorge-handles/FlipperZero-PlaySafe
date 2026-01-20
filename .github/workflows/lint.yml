@@ -1,0 +1,33 @@
+name: Lint Scripts
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  check-scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Check script files
+        run: |
+          echo "Checking for .txt files in script directories..."
+          find basic windows advanced educational -name "*.txt" -type f || echo "No scripts found"
+          
+      - name: Validate script structure
+        run: |
+          echo "Validating script files..."
+          for file in $(find basic windows advanced educational -name "*.txt" -type f 2>/dev/null); do
+            echo "Checking $file"
+            if [ ! -s "$file" ]; then
+              echo "ERROR: $file is empty"
+              exit 1
+            fi
+            if ! grep -q "REM" "$file"; then
+              echo "WARNING: $file may be missing comments"
+            fi
+          done
+          echo "Script validation complete"

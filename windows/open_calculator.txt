@@ -1,0 +1,15 @@
+REM Open Windows Calculator
+REM Simple script to launch Calculator app
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING calc
+DELAY 500
+ENTER
+DELAY 2000
+STRING 123
+DELAY 500
+STRING +456
+DELAY 500
+ENTER

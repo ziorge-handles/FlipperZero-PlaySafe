@@ -1,0 +1,49 @@
+REM Create Daily Report Template
+REM Creates a daily report template in Notepad
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING notepad
+DELAY 500
+ENTER
+DELAY 1500
+STRING ========================================
+DELAY 500
+ENTER
+STRING Daily Report - 
+DELAY 200
+STRING %date%
+DELAY 500
+ENTER
+STRING ========================================
+DELAY 500
+ENTER
+ENTER
+STRING Tasks Completed:
+DELAY 500
+ENTER
+STRING - 
+DELAY 500
+ENTER
+ENTER
+STRING Tasks In Progress:
+DELAY 500
+ENTER
+STRING - 
+DELAY 500
+ENTER
+ENTER
+STRING Notes:
+DELAY 500
+ENTER
+STRING - 
+DELAY 500
+ENTER
+ENTER
+STRING ========================================
+DELAY 500
+ENTER
+STRING End of Report
+DELAY 500
+ENTER

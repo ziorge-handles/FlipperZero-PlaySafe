@@ -1,0 +1,39 @@
+REM Process Monitor
+REM Monitors running processes and displays them
+REM Useful for security analysis
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell
+DELAY 500
+ENTER
+DELAY 1500
+STRING Get-Process | Sort-Object CPU -Descending | Select-Object -First 20 ProcessName, CPU, WorkingSet | Format-Table -AutoSize
+DELAY 500
+ENTER
+DELAY 3000
+STRING echo ""
+DELAY 500
+ENTER
+STRING echo "===== Network Connections ====="
+DELAY 500
+ENTER
+DELAY 500
+STRING netstat -ano | findstr ESTABLISHED
+DELAY 500
+ENTER
+DELAY 3000
+STRING echo ""
+DELAY 500
+ENTER
+STRING echo "Press any key to close"
+DELAY 500
+ENTER
+STRING $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+DELAY 500
+ENTER
+DELAY 1000
+STRING exit
+DELAY 500
+ENTER

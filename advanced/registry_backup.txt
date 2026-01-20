@@ -1,0 +1,40 @@
+REM Registry Backup Script
+REM Creates a backup of Windows registry
+REM Requires admin privileges
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING cmd
+DELAY 500
+CTRL SHIFT ENTER
+DELAY 1000
+ALT y
+DELAY 500
+STRING echo Creating registry backup...
+DELAY 500
+ENTER
+DELAY 500
+STRING reg export HKLM %USERPROFILE%\Desktop\registry_backup_HKLM.reg /y
+DELAY 500
+ENTER
+DELAY 3000
+STRING reg export HKCU %USERPROFILE%\Desktop\registry_backup_HKCU.reg /y
+DELAY 500
+ENTER
+DELAY 3000
+STRING echo Registry backup completed on Desktop
+DELAY 500
+ENTER
+DELAY 1000
+STRING echo Files: registry_backup_HKLM.reg and registry_backup_HKCU.reg
+DELAY 500
+ENTER
+DELAY 2000
+STRING pause
+DELAY 500
+ENTER
+DELAY 2000
+STRING exit
+DELAY 500
+ENTER

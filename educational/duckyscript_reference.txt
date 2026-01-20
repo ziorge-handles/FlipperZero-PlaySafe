@@ -1,0 +1,79 @@
+REM DuckyScript Reference Guide
+REM Common commands and syntax for BadUSB scripts
+
+REM ===== DELAYS =====
+REM DELAY X - Wait X milliseconds
+REM Default delay - 100ms
+REM Default delay - 1000ms
+
+REM ===== STRING INPUT =====
+REM STRING text - Types text as if from keyboard
+REM STRING Hello World
+REM STRING Special chars: !@#$%^&*()
+
+REM ===== KEY PRESSES =====
+REM ENTER - Press Enter key
+REM SPACE - Press Space key
+REM TAB - Press Tab key
+REM ESCAPE or ESC - Press Escape key
+REM UP - Up arrow key
+REM DOWN - Down arrow key
+REM LEFT - Left arrow key
+REM RIGHT - Right arrow key
+
+REM ===== MODIFIER KEYS =====
+REM CTRL - Control key
+REM ALT - Alt key
+REM SHIFT - Shift key
+REM GUI or WINDOWS - Windows key
+
+REM ===== KEY COMBINATIONS =====
+REM CTRL-ALT t - Ctrl+Alt+T
+REM CTRL SHIFT ESC - Ctrl+Shift+Esc
+REM GUI r - Windows+R
+REM ALT F4 - Alt+F4
+REM CTRL c - Ctrl+C
+REM CTRL v - Ctrl+V
+REM CTRL a - Ctrl+A
+
+REM ===== FUNCTION KEYS =====
+REM F1 through F12
+REM Example: F1, F2, F3, etc.
+
+REM ===== REPEAT COMMAND =====
+REM REPEAT X - Repeat previous command X times
+REM Example:
+REM STRING test
+REM REPEAT 5
+
+REM ===== COMMENTS =====
+REM This is a comment
+REM Comments start with REM
+
+REM ===== EXAMPLE SCRIPT STRUCTURE =====
+REM 1. Initial delay (let system recognize USB device)
+REM DELAY 1000
+REM
+REM 2. Open application
+REM GUI r
+REM DELAY 500
+REM STRING notepad
+REM DELAY 500
+REM ENTER
+REM
+REM 3. Execute commands
+REM DELAY 1000
+REM STRING Your text here
+REM DELAY 500
+REM ENTER
+REM
+REM 4. Clean up (optional)
+REM ALT F4
+
+REM ===== TIPS =====
+REM - Always include delays between commands
+REM - Test scripts in a VM first
+REM - Some systems may require longer delays
+REM - Antivirus may block certain key combinations
+REM - Use CTRL SHIFT ENTER for admin prompts
+REM - ALT y accepts UAC prompts

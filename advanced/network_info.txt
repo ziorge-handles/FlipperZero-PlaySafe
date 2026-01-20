@@ -1,0 +1,49 @@
+REM Network Information Script
+REM Displays network configuration
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING cmd
+DELAY 500
+CTRL SHIFT ENTER
+DELAY 1000
+ALT y
+DELAY 500
+STRING echo ===== Network Configuration =====
+DELAY 500
+ENTER
+DELAY 500
+STRING ipconfig /all
+DELAY 500
+ENTER
+DELAY 3000
+STRING echo.
+DELAY 500
+ENTER
+STRING echo ===== Active Connections =====
+DELAY 500
+ENTER
+DELAY 500
+STRING netstat -an | findstr ESTABLISHED
+DELAY 500
+ENTER
+DELAY 2000
+STRING echo.
+DELAY 500
+ENTER
+STRING echo ===== DNS Cache =====
+DELAY 500
+ENTER
+DELAY 500
+STRING ipconfig /displaydns | findstr Record
+DELAY 500
+ENTER
+DELAY 2000
+STRING pause
+DELAY 500
+ENTER
+DELAY 2000
+STRING exit
+DELAY 500
+ENTER

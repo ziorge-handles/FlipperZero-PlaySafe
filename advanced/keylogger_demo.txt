@@ -1,0 +1,40 @@
+REM Keylogger Demonstration (Educational)
+REM This demonstrates how a keylogger might work
+REM WARNING: This is for educational purposes only!
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell
+DELAY 500
+CTRL SHIFT ENTER
+DELAY 1000
+ALT y
+DELAY 1000
+STRING $logFile = "$env:TEMP\keylog_demo.txt"
+DELAY 500
+ENTER
+DELAY 500
+STRING Add-Content -Path $logFile -Value "Keylogger Demo Started: $(Get-Date)"
+DELAY 500
+ENTER
+DELAY 500
+STRING Write-Host "Keylogger demo script loaded. This is for educational purposes only."
+DELAY 500
+ENTER
+DELAY 500
+STRING Write-Host "Log file location: $logFile"
+DELAY 500
+ENTER
+DELAY 500
+STRING Write-Host "Press Ctrl+C to stop"
+DELAY 500
+ENTER
+DELAY 500
+STRING $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+DELAY 500
+ENTER
+DELAY 2000
+STRING exit
+DELAY 500
+ENTER

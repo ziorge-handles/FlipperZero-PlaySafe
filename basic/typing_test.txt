@@ -1,0 +1,20 @@
+REM Typing Test Script
+REM Demonstrates basic typing capabilities
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING notepad
+DELAY 500
+ENTER
+DELAY 1000
+STRING This is a typing test.
+DELAY 500
+ENTER
+STRING Testing special characters: !@#$%^&*()
+DELAY 500
+ENTER
+STRING Testing numbers: 1234567890
+DELAY 500
+ENTER
+STRING Testing mixed case: Hello World 123!

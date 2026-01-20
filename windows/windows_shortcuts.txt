@@ -1,0 +1,48 @@
+REM Windows Shortcuts Demonstration
+REM Shows various Windows key combinations
+
+DELAY 1000
+REM Open Run dialog
+GUI r
+DELAY 500
+STRING notepad
+DELAY 500
+ENTER
+DELAY 1000
+REM Type some text
+STRING Testing Windows shortcuts
+DELAY 500
+ENTER
+STRING Ctrl+A = Select All
+DELAY 500
+ENTER
+STRING Ctrl+C = Copy
+DELAY 500
+ENTER
+STRING Ctrl+V = Paste
+DELAY 500
+ENTER
+STRING Alt+F4 = Close Window
+DELAY 500
+ENTER
+ENTER
+STRING Now demonstrating shortcuts:
+DELAY 500
+ENTER
+REM Select all text
+CTRL a
+DELAY 500
+REM Copy
+CTRL c
+DELAY 500
+REM Open new notepad
+GUI r
+DELAY 500
+STRING notepad
+DELAY 500
+ENTER
+DELAY 1000
+REM Paste
+CTRL v
+DELAY 500
+ENTER

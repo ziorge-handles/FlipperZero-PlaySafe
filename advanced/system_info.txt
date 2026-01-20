@@ -1,0 +1,52 @@
+REM System Information Script
+REM Gathers basic system information (harmless)
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING cmd
+DELAY 500
+CTRL SHIFT ENTER
+DELAY 1000
+ALT y
+DELAY 500
+STRING echo ===== System Information =====
+DELAY 500
+ENTER
+DELAY 500
+STRING hostname
+DELAY 500
+ENTER
+DELAY 1000
+STRING whoami
+DELAY 500
+ENTER
+DELAY 1000
+STRING systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
+DELAY 500
+ENTER
+DELAY 3000
+STRING echo.
+DELAY 500
+ENTER
+STRING echo ===== Network Information =====
+DELAY 500
+ENTER
+DELAY 500
+STRING ipconfig | findstr IPv4
+DELAY 500
+ENTER
+DELAY 2000
+STRING echo.
+DELAY 500
+ENTER
+STRING echo Test completed. Press any key to close.
+DELAY 500
+ENTER
+STRING pause
+DELAY 500
+ENTER
+DELAY 2000
+STRING exit
+DELAY 500
+ENTER

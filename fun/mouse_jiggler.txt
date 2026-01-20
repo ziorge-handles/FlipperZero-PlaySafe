@@ -1,0 +1,17 @@
+REM Mouse Jiggler
+REM Keeps system awake by moving mouse periodically
+REM Runs for 30 seconds (adjust REPEAT value)
+
+DELAY 1000
+REM Move mouse right
+RIGHT
+DELAY 1000
+REM Move mouse left
+LEFT
+DELAY 1000
+REM Repeat 15 times (30 seconds total)
+REPEAT 15
+RIGHT
+DELAY 1000
+LEFT
+DELAY 1000
